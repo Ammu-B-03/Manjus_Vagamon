@@ -1,0 +1,264 @@
+.custom-carousel {
+    width: 90%;
+    max-width: 1300px;
+    margin: 40px auto;
+    position: relative;
+     padding-bottom: 40px;
+}
+
+/* Image */
+
+.custom-carousel .carousel-image {
+    width: 100%;
+    height: 600px;
+    object-fit:cover;
+    display: block;
+    border-radius: 10px;
+}
+
+.custom-carousel .carousel-image.image2{
+    object-position:bottom !important ;
+}
+.custom-carousel .carousel-image.image4{
+    object-position:top !important ;
+}
+
+
+
+/* Move carousel controls outside the image */
+
+.custom-carousel .carousel-control-prev {
+    width: 50px;
+    left: -70px;
+}
+
+.custom-carousel .carousel-control-next {
+    width: 50px;
+    right: -70px;
+}
+
+
+/* Make the arrows visible */
+
+.custom-carousel .carousel-control-prev-icon,
+.custom-carousel .carousel-control-next-icon {
+    background-color: #76C457;
+    border-radius: 50%;
+    background-size: 50%;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.custom-carousel .carousel-control-prev-icon:hover,
+.custom-carousel .carousel-control-next-icon:hover {
+    transform: scale(1.1);
+}
+
+
+/* Carousel indicators */
+
+.custom-carousel .carousel-indicators {
+    position: absolute !important;
+
+    top: 100% !important;
+    bottom: auto !important;
+
+    left: 0 !important;
+    right: 0 !important;
+
+    width: 100% !important;
+
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+
+    margin: 15px 0 0 0 !important;
+    padding: 0 !important;
+
+    z-index: 5;
+}
+
+/* Individual indicator circles */
+
+.custom-carousel .carousel-indicators button {
+    width: 12px !important;
+    height: 12px !important;
+
+    padding: 0 !important;
+    margin: 0 6px !important;
+
+    border: none !important;
+    border-radius: 50% !important;
+
+    background-color: #76C457 !important;
+
+    opacity: 0.5 !important;
+}
+
+/* Active indicator */
+
+.custom-carousel .carousel-indicators button.active {
+    background-color: #2A7C13 !important;
+    opacity: 1 !important;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .custom-carousel {
+        width: 90%;
+    }
+
+    .custom-carousel .carousel-image {
+        height: 350px;
+    }
+
+    .custom-carousel .carousel-control-prev {
+        left: -35px;
+        width: 25px;
+    }
+
+    .custom-carousel .carousel-control-next {
+        right: -35px;
+        width: 25px;
+    }
+
+    .custom-carousel .carousel-control-prev-icon,
+.custom-carousel .carousel-control-next-icon {
+    width: 18px;
+    height: 18px;
+}
+
+}
+
+
+/* Very small screens */
+
+@media (max-width: 480px) {
+
+    .custom-carousel {
+        width: 86%;
+    }
+
+    .custom-carousel .carousel-image {
+        height: 250px;
+    }
+
+    .custom-carousel .carousel-control-prev {
+        left: -30px;
+        width: 30px;
+    }
+
+    .custom-carousel .carousel-control-next {
+        right: -30px;
+        width: 30px;
+    }
+
+    .custom-carousel .carousel-indicators {
+        margin-top: 12px;
+    }
+
+    .custom-carousel .carousel-indicators [data-bs-target] {
+        width: 8px;
+        height: 8px;
+        margin: 0 4px;
+    }
+
+}
+
+.carousel-bottom-content {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    text-align: center;
+    z-index: 10;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
+
+    color: #FFF8CF;
+}
+
+
+
+.carousel-bottom-content h2 {
+    margin-bottom: 5px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #fedca1;
+}
+
+.book-now-button {
+    padding: 5px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #2A7C13 !important;
+    background-color: #fff8cfd1 !important;
+    border: none;
+    border-radius: 30px;
+    animation: buttonEntry 1.2s ease-out 0.4s both;
+}
+
+@keyframes buttonEntry {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.book-now-button:hover{
+    color: #FFF8CF !important;
+    background-color: #2A7C13 !important;
+}
+
+.whatsapp-button{
+    padding: 5px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    animation: buttonEntry 1.2s ease-out 0.4s both;
+}
+
+.carousel-tagline {
+    margin-bottom: 15px;
+    font-size: 30px;
+    font-weight: bold;
+
+    animation: taglineEntry 1.2s ease-out;
+}
+
+@keyframes taglineEntry {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.welcome{
+    animation : welcomeEntry 1.2s ease-out;
+}
+
+@keyframes welcomeEntry {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

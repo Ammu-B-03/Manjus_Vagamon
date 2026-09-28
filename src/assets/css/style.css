@@ -1,0 +1,455 @@
+
+.card-image{
+    object-fit: cover;
+}
+
+.photo-strip {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 10px 0.005%;
+    scroll-behavior: smooth;
+    margin-top: 16px;
+    /* Hide scrollbar */
+    scrollbar-width: none;
+}
+
+.photo-strip::-webkit-scrollbar {
+    display: none;
+}
+
+.photo-card {
+    flex: 0 0 calc(20% - 12px);
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.photo-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+
+    .photo-card {
+        flex: 0 0 70%;
+    }
+
+    .photo-card img {
+        height: 220px;
+    }
+
+}
+
+.photo-overlay {
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+
+    padding: 20px;
+    
+    background-image: linear-gradient(rgba(255, 255, 255, 0),black);
+
+    color: #FFF8CF;
+
+    text-align: center;
+
+    opacity: 0;
+
+    transform: translateY(100%);
+
+    transition: all 0.4s ease;
+}
+
+
+.photo-card:hover .photo-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =================================
+   WELCOME SECTION
+================================= */
+
+.welcome-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    width: 90%;
+    padding: 40px 0 60px;
+}
+
+
+/* Heading */
+
+.welcome-heading {
+    margin-bottom: 45px;
+}
+
+.welcome {
+    color: #2A7C13;
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.welcome-subtitle {
+    color: #777;
+    font-size: 18px;
+    margin: 0;
+}
+
+
+/* =================================
+   INTRODUCTION
+================================= */
+
+.welcome-intro {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    margin-bottom: 55px;
+}
+
+
+/* Image */
+
+.welcome-image {
+    flex: 0 0 60%;
+    overflow: hidden;
+    border-radius: 18px;
+}
+
+.welcome-image img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    display: block;
+
+    transition: transform 0.6s ease;
+}
+
+.welcome-image:hover img {
+    transform: scale(1.04);
+}
+
+
+/* Content */
+
+.welcome-content {
+    flex: 1;
+}
+
+.welcome-description {
+    color: #555;
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+
+/* =================================
+   FEATURE BOXES
+================================= */
+
+.box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    padding: 9px 14px;
+
+    background-color: #FFF8CF;
+
+    border-radius: 20px;
+
+    transition:
+        transform 0.25s ease,
+        background-color 0.25s ease;
+}
+
+.box span {
+    font-size: 16px;
+}
+
+.box p {
+    margin: 0;
+
+    color: #2A7C13;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.box:hover {
+    transform: translateY(-3px);
+    background-color: #f4edb5;
+}
+
+@media (max-width: 768px) {
+
+    .welcome-container {
+        padding: 30px 15px 45px;
+    }
+
+    .welcome-heading {
+        margin-bottom: 30px;
+    }
+
+    .welcome {
+        font-size: 32px;
+    }
+
+    .welcome-subtitle {
+        font-size: 16px;
+    }
+
+    .welcome-intro {
+        flex-direction: column;
+        gap: 25px;
+        margin-bottom: 40px;
+    }
+
+    .welcome-image {
+        width: 100%;
+    }
+
+    .welcome-image img {
+        height: 260px;
+    }
+
+    .welcome-content {
+        width: 100%;
+    }
+
+    .welcome-description {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .box-container {
+        gap: 8px;
+    }
+
+    .box {
+        padding: 8px 12px;
+    }
+
+}
+
+
+
+.site-footer {
+    background-color: #2A7C13;
+    color: #FFF8CF;
+
+    margin-top: 60px;
+    padding-top: 55px;
+}
+
+
+/* ============================= */
+/* Footer Content */
+/* ============================= */
+
+.footer-content {
+    padding-bottom: 40px;
+}
+
+
+/* ============================= */
+/* Brand */
+/* ============================= */
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 18px;
+}
+
+.footer-logo {
+    width: 55px;
+    height: 155px;
+
+    object-fit: cover;
+
+    /* border-radius: 50%; */
+}
+
+.footer-brand-name {
+    width: 150px;
+    height: auto;
+}
+
+.footer-about p {
+    max-width: 380px;
+
+    color: #f7f4d8;
+
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* ============================= */
+/* Footer Columns */
+/* ============================= */
+
+.footer-column h5 {
+    margin-bottom: 20px;
+
+    color: #FFF8CF;
+
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.footer-column p {
+    color: #f7f4d8;
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* ============================= */
+/* Sitemap */
+/* ============================= */
+
+.footer-column a {
+    display: block;
+
+    width: fit-content;
+
+    margin-bottom: 10px;
+
+    color: #f7f4d8;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.footer-column a:hover {
+    color: #FFF8CF;
+    text-decoration: underline;
+
+    transform: translateX(4px);
+}
+
+
+/* ============================= */
+/* Map */
+/* ============================= */
+
+.map-link {
+    color: #FFF8CF !important;
+
+    font-weight: 600;
+}
+
+
+/* ============================= */
+/* Bottom */
+/* ============================= */
+
+.footer-bottom {
+    padding: 20px 0;
+
+    border-top: 1px solid rgba(255, 248, 207, 0.25);
+
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin: 0;
+
+    color: #e9e6c9;
+
+    font-size: 13px;
+}
+
+
+/* ============================= */
+/* Mobile */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+    .site-footer {
+        margin-top: 40px;
+        padding-top: 40px;
+    }
+
+    .footer-content {
+        row-gap: 35px;
+    }
+
+    .footer-about {
+        text-align: center;
+    }
+
+    .footer-brand {
+        justify-content: center;
+    }
+
+    .footer-about p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .footer-column {
+        text-align: center;
+    }
+
+    .footer-column a {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+
+/* CONTACT */
+
+.contact-container{
+    margin-top: 100px;
+    background-image: url(../images/vagamon6.jpg);
+    height: 100%;
+}
+
+
+.room-btn{
+    background-color: #2A7C13 !important;
+    color: #f4edb5 !important;
+    border-radius: 20px;
+    border: none;
+    margin-top: 8px;
+    transition:
+        transform 0.25s ease,
+        background-color 0.25s ease;
+
+}
+
+.room-btn:hover {
+    transform: translateY(-3px);
+    background-color: #205d0f;
+}
