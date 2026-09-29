@@ -20,7 +20,7 @@ import floor1Image6 from '../assets/images/bedroom2_1.jpg'
 // Floor -1 Images
 // ==============================
 
-import floor2Image1 from '../assets/images/bedroom2_2.jpg'
+import floor2Image1 from '../assets/images/bedroom2_a.jpg'
 import floor2Image2 from '../assets/images/bedroom2_c.jpg'
 import floor2Image3 from '../assets/images/Bed room 03 Ang 05.jpg'
 import floor2Image4 from '../assets/images/Dining rooml Ang 01.jpg'
@@ -379,7 +379,7 @@ function Rooms() {
                                         <Button
                                             className="room-book-button"
 
-                                            href="tel:+91XXXXXXXXXX"
+                                            href="tel:+919846046123"
                                         >
                                             Call Now
                                         </Button>
