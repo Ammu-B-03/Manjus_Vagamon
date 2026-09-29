@@ -57,13 +57,13 @@ function Rooms() {
 
             floor: "Floor 1",
 
-            title: "The Main Living Floor",
+            title: "The Ground Floor",
 
             description:
-                "A comfortable family space with two bedrooms, a living room, kitchen and private balcony.",
+                "A comfortable family space with two bedrooms, a living room,a dining space kitchen and an enormous balcony with BBQ facilities.",
 
             details:
-                "The main floor is the heart of the cottage, with shared spaces for relaxing, dining and spending time together.",
+                "The main floor is the heart of the cottage, with shared spaces for relaxing, dining and spending time together.It can be directly accesed from the car",
 
             price: "₹XXXX / night",
 
@@ -74,7 +74,8 @@ function Rooms() {
                 "Kitchen",
                 "Barbeque",
                 "Private Balcony",
-                "Bathroom"
+                "Bathroom",
+                "Play Area"
             ],
 
             images: [
@@ -96,7 +97,7 @@ function Rooms() {
             title: "Private Bedrooms with a View",
 
             description:
-                "Two comfortable bedrooms, each with its own balcony overlooking the peaceful surroundings.",
+                "Three comfortable bedrooms, each with its own private balcony and windows overlooking the mountains and valleys. A common living space and private garden to enjoy relax in the company of nature",
 
             details:
                 "Each bedroom provides a private space to relax while making the most of the hillside setting.",
@@ -108,7 +109,8 @@ function Rooms() {
                 "Private Balcony",
                 "Bathroom",
                 "Hill Views",
-                "Living Area"
+                "Living Area",
+                "Private Garden"
             ],
 
             images: [

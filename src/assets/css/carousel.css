@@ -1,31 +1,146 @@
+/* =========================================================
+   CAROUSEL CONTAINER
+   ========================================================= */
+
 .custom-carousel {
     width: 90%;
     max-width: 1300px;
     margin: 40px auto;
     position: relative;
-     padding-bottom: 40px;
+    padding-bottom: 40px;
 }
 
-/* Image */
+
+/* =========================================================
+   CAROUSEL IMAGE
+   ========================================================= */
 
 .custom-carousel .carousel-image {
     width: 100%;
     height: 600px;
-    object-fit:cover;
+    object-fit: cover;
     display: block;
     border-radius: 10px;
 }
 
-.custom-carousel .carousel-image.image2{
-    object-position:bottom !important ;
+/* Individual image positioning */
+
+.custom-carousel .carousel-image.image2 {
+    object-position: bottom !important;
 }
-.custom-carousel .carousel-image.image4{
-    object-position:top !important ;
+
+.custom-carousel .carousel-image.image4 {
+    object-position: top !important;
 }
 
 
+/* =========================================================
+   CAROUSEL TEXT + BUTTONS
+   ========================================================= */
 
-/* Move carousel controls outside the image */
+.carousel-bottom-content {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 90%;
+    text-align: center;
+
+    z-index: 10;
+
+    font-family:
+        'Trebuchet MS',
+        'Lucida Sans Unicode',
+        'Lucida Grande',
+        'Lucida Sans',
+        Arial,
+        sans-serif !important;
+
+    color: #FFF8CF;
+}
+
+/* Tagline */
+
+.carousel-tagline {
+    margin: 0 0 15px 0;
+    font-size: 30px;
+    line-height: 1.2;
+    font-weight: bold;
+    color: #fedca1;
+
+    animation: taglineEntry 1.2s ease-out;
+}
+
+/* Buttons container */
+
+.carousel-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+
+/* =========================================================
+   CALL BUTTON
+   ========================================================= */
+
+.book-now-button {
+    padding: 5px 30px;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    color: #2A7C13 !important;
+    background-color: #fff8cfd1 !important;
+
+    border: none;
+    border-radius: 30px;
+
+    white-space: nowrap;
+
+    animation: buttonEntry 1.2s ease-out 0.4s both;
+}
+
+.book-now-button:hover {
+    color: #FFF8CF !important;
+    background-color: #2A7C13 !important;
+}
+
+
+/* =========================================================
+   WHATSAPP BUTTON
+   ========================================================= */
+
+.whatsapp-button {
+    padding: 5px 30px;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    border: none;
+    border-radius: 30px;
+
+    white-space: nowrap;
+
+    animation: buttonEntry 1.2s ease-out 0.4s both;
+}
+
+
+/* =========================================================
+   BUTTON SVG ICONS
+   ========================================================= */
+
+.book-now-button svg,
+.whatsapp-button svg {
+    vertical-align: middle;
+}
+
+
+/* =========================================================
+   CAROUSEL CONTROLS / ARROWS
+   ========================================================= */
 
 .custom-carousel .carousel-control-prev {
     width: 50px;
@@ -38,15 +153,18 @@
 }
 
 
-/* Make the arrows visible */
+/* Arrow circles */
 
 .custom-carousel .carousel-control-prev-icon,
 .custom-carousel .carousel-control-next-icon {
-    background-color: #76C457;
-    border-radius: 50%;
-    background-size: 50%;
     width: 40px;
     height: 40px;
+
+    background-color: #76C457;
+    background-size: 50%;
+
+    border-radius: 50%;
+
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
@@ -56,7 +174,9 @@
 }
 
 
-/* Carousel indicators */
+/* =========================================================
+   CAROUSEL INDICATORS
+   ========================================================= */
 
 .custom-carousel .carousel-indicators {
     position: absolute !important;
@@ -78,15 +198,6 @@
 
     z-index: 5;
 }
-
-.carousel-buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-
-/* Individual indicator circles */
 
 .custom-carousel .carousel-indicators button {
     width: 12px !important;
@@ -110,243 +221,10 @@
     opacity: 1 !important;
 }
 
-/* ============================= */
-/* Mobile */
-/* ============================= */
 
-@media (max-width: 768px) {
-
-    .custom-carousel {
-        width: 90%;
-        padding-bottom: 35px;
-    }
-
-    .custom-carousel .carousel-image {
-        height: 350px;
-    }
-
-    /* Carousel arrows */
-
-    .custom-carousel .carousel-control-prev {
-        left: -35px;
-        width: 25px;
-    }
-
-    .custom-carousel .carousel-control-next {
-        right: -35px;
-        width: 25px;
-    }
-
-    .custom-carousel .carousel-control-prev-icon,
-    .custom-carousel .carousel-control-next-icon {
-        width: 20px;
-        height: 20px;
-    }
-
-    /* Bottom text and buttons */
-
-    .carousel-bottom-content {
-        width: 90%;
-        bottom: 35px;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    .carousel-tagline {
-        margin-bottom: 12px;
-        font-size: 12px;
-        line-height: 1.2;
-    }
-
-    .carousel-buttons {
-    gap: 8px;
-}
-
-    .carousel-bottom-content > div {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 8px;
-    }
-
-    .book-now-button,
-    .whatsapp-button {
-        padding: 6px 14px;
-        font-size: 14px;
-        white-space: nowrap;
-        margin: 0 !important;
-    }
-
-    .book-now-button svg,
-    .whatsapp-button svg {
-        width: 14px;
-        height: 14px;
-    }
-
-    /* Indicators */
-
-    .custom-carousel .carousel-indicators {
-        margin-top: 10px !important;
-    }
-
-    .custom-carousel .carousel-indicators button {
-        width: 8px !important;
-        height: 8px !important;
-        margin: 0 4px !important;
-    }
-}
-
-
-/* ============================= */
-/* Very Small Screens */
-/* ============================= */
-
-@media (max-width: 480px) {
-
-    .custom-carousel {
-        width: 86%;
-        padding-bottom: 30px;
-    }
-
-    .custom-carousel .carousel-image {
-        height: 270px;
-    }
-
-    /* Arrows */
-
-    .custom-carousel .carousel-control-prev {
-        left: -30px;
-        width: 25px;
-    }
-
-    .custom-carousel .carousel-control-next {
-        right: -30px;
-        width: 25px;
-    }
-
-    .custom-carousel .carousel-control-prev-icon,
-    .custom-carousel .carousel-control-next-icon {
-        width: 18px;
-        height: 18px;
-    }
-
-    /* Text */
-
-    .carousel-bottom-content {
-        width: 94%;
-        bottom: 25px;
-    }
-
-    .carousel-buttons {
-    gap: 6px;
-}
-
-    .carousel-tagline {
-        font-size: 17px;
-        line-height: 1.2;
-        margin-bottom: 9px;
-    }
-
-    /* Buttons */
-
-    .carousel-bottom-content > div {
-        gap: 6px;
-    }
-
-    .book-now-button,
-    .whatsapp-button {
-        padding: 5px 10px;
-        font-size: 12px;
-        border-radius: 20px;
-    }
-
-    .book-now-button svg,
-    .whatsapp-button svg {
-        width: 12px;
-        height: 12px;
-        margin-right: 2px !important;
-    }
-
-    /* Indicators */
-
-    .custom-carousel .carousel-indicators {
-        margin-top: 8px !important;
-    }
-
-    .custom-carousel .carousel-indicators button {
-        width: 7px !important;
-        height: 7px !important;
-        margin: 0 3px !important;
-    }
-}
-
-
-/* Very small screens */
-
-@media (max-width: 480px) {
-
-    .custom-carousel {
-        width: 86%;
-    }
-
-    .custom-carousel .carousel-image {
-        height: 250px;
-    }
-
-    .custom-carousel .carousel-control-prev {
-        left: -30px;
-        width: 30px;
-    }
-
-    .custom-carousel .carousel-control-next {
-        right: -30px;
-        width: 30px;
-    }
-
-    .custom-carousel .carousel-indicators {
-        margin-top: 12px;
-    }
-
-    .custom-carousel .carousel-indicators [data-bs-target] {
-        width: 8px;
-        height: 8px;
-        margin: 0 4px;
-    }
-
-}
-
-.carousel-bottom-content {
-    position: absolute;
-    bottom: 50px;
-    left: 50%;
-    transform: translateX(-50%);
-
-    text-align: center;
-    z-index: 10;
-        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
-
-    color: #FFF8CF;
-}
-
-
-
-.carousel-bottom-content h2 {
-    margin-bottom: 5px;
-    font-size: 30px;
-    font-weight: bold;
-    color: #fedca1;
-}
-
-.book-now-button {
-    padding: 5px 30px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #2A7C13 !important;
-    background-color: #fff8cfd1 !important;
-    border: none;
-    border-radius: 30px;
-    animation: buttonEntry 1.2s ease-out 0.4s both;
-}
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
 
 @keyframes buttonEntry {
     from {
@@ -358,28 +236,6 @@
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-.book-now-button:hover{
-    color: #FFF8CF !important;
-    background-color: #2A7C13 !important;
-}
-
-.whatsapp-button{
-    padding: 5px 30px;
-    font-size: 18px;
-    font-weight: bold;
-    border: none;
-    border-radius: 30px;
-    animation: buttonEntry 1.2s ease-out 0.4s both;
-}
-
-.carousel-tagline {
-    margin-bottom: 15px;
-    font-size: 30px;
-    font-weight: bold;
-
-    animation: taglineEntry 1.2s ease-out;
 }
 
 @keyframes taglineEntry {
@@ -394,8 +250,8 @@
     }
 }
 
-.welcome{
-    animation : welcomeEntry 1.2s ease-out;
+.welcome {
+    animation: welcomeEntry 1.2s ease-out;
 }
 
 @keyframes welcomeEntry {
@@ -407,5 +263,200 @@
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+
+/* =========================================================
+   TABLET / MOBILE
+   <= 768px
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* Container */
+
+    .custom-carousel {
+        width: 90%;
+        padding-bottom: 35px;
+    }
+
+    /* Image */
+
+    .custom-carousel .carousel-image {
+        height: 350px;
+    }
+
+
+    /* -----------------------------------------------------
+       Arrows
+       ----------------------------------------------------- */
+
+    .custom-carousel .carousel-control-prev {
+        left: -30px;
+        width: 25px;
+    }
+
+    .custom-carousel .carousel-control-next {
+        right: -30px;
+        width: 25px;
+    }
+
+    .custom-carousel .carousel-control-prev-icon,
+    .custom-carousel .carousel-control-next-icon {
+        width: 22px;
+        height: 22px;
+    }
+
+
+    /* -----------------------------------------------------
+       Text + buttons
+       ----------------------------------------------------- */
+
+    .carousel-bottom-content {
+        width: 90%;
+        bottom: 30px;
+    }
+
+    .carousel-tagline {
+        font-size: 22px;
+        line-height: 1.2;
+        margin-bottom: 10px;
+    }
+
+    .carousel-buttons {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .book-now-button,
+    .whatsapp-button {
+        padding: 6px 14px;
+        font-size: 14px;
+
+        margin: 0 !important;
+    }
+
+    .book-now-button svg,
+    .whatsapp-button svg {
+        width: 14px;
+        height: 14px;
+    }
+
+
+    /* -----------------------------------------------------
+       Indicators
+       ----------------------------------------------------- */
+
+    .custom-carousel .carousel-indicators {
+        margin-top: 10px !important;
+    }
+
+    .custom-carousel .carousel-indicators button {
+        width: 8px !important;
+        height: 8px !important;
+        margin: 0 4px !important;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   <= 480px
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    /* Container */
+
+    .custom-carousel {
+        width: 86%;
+        padding-bottom: 30px;
+    }
+
+    /* Image */
+
+    .custom-carousel .carousel-image {
+        height: 250px;
+    }
+
+
+    /* -----------------------------------------------------
+       Arrows
+       ----------------------------------------------------- */
+
+    .custom-carousel .carousel-control-prev {
+        left: -25px;
+        width: 25px;
+    }
+
+    .custom-carousel .carousel-control-next {
+        right: -25px;
+        width: 25px;
+    }
+
+    .custom-carousel .carousel-control-prev-icon,
+    .custom-carousel .carousel-control-next-icon {
+        width: 18px;
+        height: 18px;
+    }
+
+
+    /* -----------------------------------------------------
+       Text
+       ----------------------------------------------------- */
+
+    .carousel-bottom-content {
+        width: 92%;
+        bottom: 22px;
+    }
+
+    .carousel-tagline {
+        font-size: 17px;
+        line-height: 1.2;
+        margin-bottom: 8px;
+    }
+
+
+    /* -----------------------------------------------------
+       Buttons
+       ----------------------------------------------------- */
+
+    .carousel-buttons {
+        width: 100%;
+        gap: 6px;
+    }
+
+    .book-now-button,
+    .whatsapp-button {
+        padding: 5px 10px;
+        font-size: 12px;
+
+        border-radius: 20px;
+    }
+
+    .book-now-button svg,
+    .whatsapp-button svg {
+        width: 12px;
+        height: 12px;
+        margin-right: 2px !important;
+    }
+
+
+    /* -----------------------------------------------------
+       Indicators
+       ----------------------------------------------------- */
+
+    .custom-carousel .carousel-indicators {
+        margin-top: 8px !important;
+    }
+
+    .custom-carousel .carousel-indicators button {
+        width: 7px !important;
+        height: 7px !important;
+        margin: 0 3px !important;
     }
 }
