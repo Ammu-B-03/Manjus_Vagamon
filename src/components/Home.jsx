@@ -56,7 +56,7 @@ function Home({vagamon}) {
 
                 <div className="box">
                     <span>🛏️</span>
-                    <p>5 Bedrooms</p>
+                    <p>6 Bedrooms</p>
                 </div>
 
                 <div className="box">

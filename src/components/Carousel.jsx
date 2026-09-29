@@ -59,7 +59,7 @@ function Carousel() {
                     <i></i>
                     Book Now
                 </Button> */}
-                <div className=''>
+                <div className='carousel-buttons'>
                      <Button className="btn  book-now-button me-3"
                      as='a' href='tel:+9846046123'>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone me-1" viewBox="0 0 16 16">
