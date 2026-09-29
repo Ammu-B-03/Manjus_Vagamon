@@ -132,6 +132,7 @@
 
 .room-thumbnail {
     margin-top: 5px;
+
     flex: 0 0 90px;
 
     width: 90px;
@@ -175,7 +176,6 @@
     display: inline-block;
 
     margin-bottom: 10px;
-
     padding: 5px 14px;
 
     border-radius: 20px;
@@ -209,6 +209,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+
     margin: 25px 0;
 }
 
@@ -289,56 +290,89 @@
 
 
 /* ============================= */
-/* Price + Booking */
+/* Booking */
 /* ============================= */
+
+/*
+   Both buttons stay on the same line.
+   They also have exactly the same dimensions.
+*/
 
 .room-booking {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
 
-    gap: 25px;
+    gap: 12px;
 
     margin-top: 25px;
-}
 
-.room-price {
-    display: flex;
-    flex-direction: column;
-}
-
-.room-price span {
-    font-size: 13px;
-    color: #777;
-}
-
-.room-price strong {
-    font-size: 22px;
-    color: #2A7C13;
+    width: 100%;
 }
 
 
 /* ============================= */
-/* Book Now Button */
+/* Booking Buttons */
 /* ============================= */
 
-.room-book-button {
-    padding: 8px 25px !important;
+.room-book-button,
+.room-booking .book-now-button {
+    display: inline-flex !important;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 125px;
+    min-width: 125px;
+    height: 42px;
+
+    padding: 6px 15px !important;
+
+    margin: 0 !important;
 
     border: none !important;
     border-radius: 25px !important;
 
-    background-color: #2A7C13 !important;
-    color: #FFF8CF !important;
-
+    font-size: 15px !important;
     font-weight: bold;
+
+    line-height: 1;
+
+    white-space: nowrap;
+
+    box-sizing: border-box;
 
     transition:
         transform 0.3s ease,
         background-color 0.3s ease;
 }
 
+
+/* Call Now */
+
+.room-book-button {
+    background-color: #2A7C13 !important;
+    color: #FFF8CF !important;
+}
+
 .room-book-button:hover {
     background-color: #4aab2f !important;
+    color: #FFF8CF !important;
+
+    transform: translateY(-2px);
+}
+
+
+/* Book Now */
+
+.room-booking .book-now-button {
+    background-color: #FFF8CF !important;
+    color: #2A7C13 !important;
+}
+
+.book-now-button:hover {
+    background-color: #2A7C13 !important;
+    color: #FFF8CF !important;
 
     transform: translateY(-2px);
 }
@@ -435,7 +469,7 @@
 
 
 /* ============================= */
-/* Mobile */
+/* Tablet / Mobile */
 /* ============================= */
 
 @media (max-width: 768px) {
@@ -474,17 +508,18 @@
 
     .rooms-introduction p {
         font-size: 16px;
+        line-height: 1.7;
     }
 
 
     /* Floor */
 
     .floor-section {
-        padding: 50px 10px;
+        padding: 50px 15px;
     }
 
 
-    /* Disable alternating layout */
+    /* Disable alternating layout on mobile */
 
     .reverse-section .row {
         flex-direction: column;
@@ -501,15 +536,17 @@
     /* Content */
 
     .floor-content {
-        padding: 10px 0;
+        padding: 15px 0;
     }
 
     .floor-content h2 {
         font-size: 28px;
+        margin-bottom: 15px;
     }
 
     .floor-content p {
         font-size: 16px;
+        line-height: 1.7;
     }
 
 
@@ -529,17 +566,28 @@
     /* Booking */
 
     .room-booking {
-        gap: 18px;
+        width: 100%;
+
+        display: flex;
+        flex-direction: row;
+
+        align-items: center;
+        justify-content: flex-start;
+
+        gap: 10px;
+
         margin-top: 20px;
     }
 
-    .room-price strong {
-        font-size: 20px;
-    }
+    .room-book-button,
+    .room-booking .book-now-button {
+        width: 120px;
+        min-width: 120px;
+        height: 40px;
 
-    .room-book-button {
-        padding: 7px 20px !important;
-        font-size: 14px;
+        padding: 7px 12px !important;
+
+        font-size: 14px !important;
     }
 
 
@@ -556,11 +604,15 @@
         padding: 60px 20px;
     }
 
+    .rooms-cta h2 {
+        font-size: 30px;
+    }
+
 }
 
 
 /* ============================= */
-/* Very Small Screens */
+/* Small Mobile */
 /* ============================= */
 
 @media (max-width: 480px) {
@@ -573,9 +625,16 @@
         font-size: 16px;
     }
 
+
+    /* Gallery */
+
     .main-room-image {
         height: 240px;
+        border-radius: 12px;
     }
+
+
+    /* Thumbnails */
 
     .room-thumbnail {
         flex: 0 0 75px;
@@ -584,18 +643,39 @@
         height: 55px;
     }
 
+
+    /* Booking Buttons */
+
     .room-booking {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
+        gap: 8px;
     }
 
-    .room-book-button {
-        width: auto;
+    .room-book-button,
+    .room-booking .book-now-button {
+        width: 115px;
+        min-width: 115px;
+        height: 38px;
+
+        padding: 6px 8px !important;
+
+        font-size: 13px !important;
+
+        border-radius: 20px !important;
+    }
+
+
+    /* CTA */
+
+    .rooms-cta {
+        padding: 50px 15px;
     }
 
     .rooms-cta h2 {
         font-size: 28px;
+    }
+
+    .rooms-cta p {
+        font-size: 15px;
     }
 
 }

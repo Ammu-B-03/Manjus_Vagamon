@@ -35,7 +35,7 @@ function Footer() {
                         </div>
 
                         <p>
-                            A cozy hillside homestay in Vagamon,
+                            A cozy hillside home in Vagamon,
                             surrounded by peaceful views, fresh air
                             and the beauty of the Western Ghats.
                         </p>
@@ -91,7 +91,7 @@ function Footer() {
                             Kerala, India
                         </p>
                        <span className='d-flex'>📍 <a
-                            href="https://maps.google.com"
+                            href="https://maps.app.goo.gl/Y8nnNzh819zyzzZo6"
                             target="_blank"
                             rel="noreferrer"
                             className="map-link"
