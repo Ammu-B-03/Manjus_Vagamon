@@ -13,7 +13,7 @@
 /* ============================= */
 
 .rooms-header {
-    padding: 80px 20px;
+    padding: 60px 10px;
     text-align: center;
     background-color: #FFF8CF;
 }
@@ -28,7 +28,7 @@
 .rooms-subtitle {
     margin-top: 15px;
     font-size: 20px;
-    color: #555;
+    color: #000000;
     animation: subtitleEntry 1s ease-out 0.2s both;
 }
 
@@ -39,15 +39,15 @@
 
 .rooms-introduction {
     max-width: 850px;
-    padding-top: 70px;
-    padding-bottom: 30px;
+    padding-top: 40px;
+    padding-bottom: 15px;
     text-align: center;
 }
 
 .rooms-introduction h2 {
     color: #2A7C13;
     font-size: 32px;
-    margin-bottom: 15px;
+    margin-bottom: 8px;
 }
 
 .rooms-introduction p {
@@ -275,7 +275,7 @@
 }
 
 .extra-details.show-details {
-    max-height: 150px;
+    max-height: 500px;
 
     opacity: 1;
 
@@ -515,7 +515,7 @@
     /* Floor */
 
     .floor-section {
-        padding: 50px 15px;
+        padding: 0px 15px;
     }
 
 

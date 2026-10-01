@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { Container, Row, Col, Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import './../assets/css/rooms.css'
+// import DatePicker from 'react-datepicker'
+// import 'react-datepicker/dist/react-datepicker.css'
 
 
 // ==============================
@@ -64,7 +66,7 @@ function Rooms() {
                 "A comfortable family space with two bedrooms, a living room,a dining space kitchen and an enormous balcony with BBQ facilities.",
 
             details:
-                "The main floor is the heart of the cottage, with shared spaces for relaxing, dining and spending time together.It can be directly accesed from the car",
+                "This main floor is the heart of the cottage, with shared spaces for relaxing, dining and spending time together.If you love cooking, there is a refreshing space for your culinary adventures here.This floor can be directly accessed from the car",
 
             price: "₹XXXX / night",
 
@@ -76,7 +78,8 @@ function Rooms() {
                 "Barbeque",
                 "Private Balcony",
                 "Bathroom",
-                "Play Area"
+                "Play Area",
+                "Direct Access"
             ],
 
             images: [
@@ -101,7 +104,7 @@ function Rooms() {
                 "Three comfortable bedrooms, each with its own private balcony and windows overlooking the mountains and valleys. A common living space and private garden to enjoy relax in the company of nature",
 
             details:
-                "Each bedroom provides a private space to relax while making the most of the hillside setting.",
+                "Each bedroom provides a private space to relax while making the most of the hillside setting along with entry through a well-manicured garden.",
 
             price: "₹XXXX / night",
 
@@ -132,10 +135,10 @@ function Rooms() {
             title: "The Dormitory",
 
             description:
-                "A spacious dormitory-style room designed for families and larger groups travelling together.",
+                "A spacious dormitory-style room designed for extended families and larger groups travelling together.",
 
             details:
-                "The dormitory provides a shared sleeping space that is particularly suitable for larger groups and family gatherings.",
+                "This is the best space of Manjus Vagamon.The most happening family space for cousins and siblings and the chilling place for the close friends who has not slept together for a long time. The always inviting multiple room with five beds and normally all families favourite - a large space with all facilities.",
 
             price: "₹XXXX / night",
 
@@ -145,7 +148,7 @@ function Rooms() {
                 "Suitable for Groups",
                 "Bathroom",
                 "Quiet Setting",
-                "Private Garden"
+                // "Private Garden"
             ],
 
             images: [
@@ -177,6 +180,14 @@ function Rooms() {
                     <p className="rooms-subtitle">
                         A cozy hillside home in the heart of Vagamon
                     </p>
+                    <p className='text-secondary'>
+                        The finest luxury in the hills is not extravagance, but the feeling of having nowhere else to go. Here in Vagamon, the mountains ask nothing from you except a pause, a deep breath, and a day or two in life that feels beautifully unhurried.
+                         Manjus Vagamon offers the beauty and brightness of a new era with it's six beautifully designed rooms, where each window opens to the mountains, and  the balconies panders you with complete privacy of the valleys of your own.
+                        </p>
+                    <p className='text-secondary'>
+                        At Manjus Vagamon, a mandatory night walk along the startlit country roads after campfire and signature barbeque; you would never have enjoyed life.
+                    </p>
+
 
                 </Container>
 
@@ -197,7 +208,7 @@ function Rooms() {
                     Built along the natural slope of the hill, Manjus Vagamon
                     is arranged across three levels. Each floor offers a
                     different experience, from comfortable family spaces to
-                    private bedrooms and a spacious dormitory for groups.
+                    private bedrooms and multiple spacious rooms for extended families .
                 </p>
 
             </Container>
@@ -229,6 +240,10 @@ function Rooms() {
                             <Col lg={6}>
 
                                 <div className="room-gallery">
+
+                                    <span className="floor-label">
+                                        {floor.floor}
+                                    </span>
 
 
                                     {/* Main Image */}
@@ -318,9 +333,9 @@ function Rooms() {
 
                                     {/* Floor Label */}
 
-                                    <span className="floor-label">
+                                    {/* <span className="floor-label">
                                         {floor.floor}
-                                    </span>
+                                    </span> */}
 
 
                                     {/* Floor Title */}
@@ -492,7 +507,7 @@ function Rooms() {
 
                     <Button
                         className="cta-button"
-                         as={Link} to="/contact"
+                        as={Link} to="/contact"
                     >
                         Contact Us
                     </Button>

@@ -90,13 +90,13 @@ function Footer() {
                             Vagamon, Idukki<br />
                             Kerala, India
                         </p>
-                       <span className='d-flex'>📍 <a
+                       <span><a 
                             href="https://maps.app.goo.gl/Y8nnNzh819zyzzZo6"
                             target="_blank"
                             rel="noreferrer"
                             className="map-link"
                         >
-                           View on Google Maps
+                           📍View on Google Maps
                         </a></span>
 
                         
