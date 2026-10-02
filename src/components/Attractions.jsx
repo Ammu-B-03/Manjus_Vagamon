@@ -139,7 +139,7 @@ const dayTrips = [
         name: "Parunthumpara",
         distance: "20 KM from Vagamon",
         description:
-            "20 KM from Vagamon, reach Kuttikanam after passing Elappara. Proceed to wards Peerumade direcion. 4 KM after Peerumade town you reach Namkulam junction. There the road leads you to the Majestic Parunthumpara, A short climb up. You will be in an all together different terrain. Just see and feel it."
+            "20 KM from Vagamon, reach Kuttikanam after passing Elappara. Proceed towards Peerumade direction. 4 KM after Peerumade town you will reach Namkulam junction. There the road leads you to the Majestic Parunthumpara, After a short climb up,you will be in an all together different terrain. Just see and feel it."
     },
     {
         id: 2,
@@ -417,9 +417,9 @@ const dayTrips = [
                                         {place.name}
                                     </h3>
 
-                                    <span className="trip-distance">
+                                    {/* <span className="trip-distance">
                                         {place.distance}
-                                    </span>
+                                    </span> */}
 
                                     <p>
                                         {place.description}
