@@ -182,10 +182,10 @@ function Rooms() {
                     </p>
                     <p className='text-secondary'>
                         The finest luxury in the hills is not extravagance, but the feeling of having nowhere else to go. Here in Vagamon, the mountains ask nothing from you except a pause, a deep breath, and a day or two in life that feels beautifully unhurried.
-                         Manjus Vagamon offers the beauty and brightness of a new era with it's six beautifully designed rooms, where each window opens to the mountains, and  the balconies panders you with complete privacy of the valleys of your own.
+                         Manjus Vagamon offers the beauty and brightness of a new era with it's six beautifully designed rooms, where each window opens to the mountains, and  the balconies pampers you with complete privacy of the valleys of your own.
                         </p>
                     <p className='text-secondary'>
-                        At Manjus Vagamon, a mandatory night walk along the startlit country roads after campfire and signature barbeque; you would never have enjoyed life.
+                        At Manjus Vagamon, a mandatory night walk along the startlit country roads after campfire and signature barbeque; you would never have enjoyed in life.
                     </p>
 
 
