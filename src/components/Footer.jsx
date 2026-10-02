@@ -51,6 +51,8 @@ function Footer() {
                         <Link to="/rooms">Rooms</Link>
                         <Link to="/attractions">Attractions</Link>
                         <Link to="/contact">Contact</Link>
+                        
+
 
                     </Col>
 

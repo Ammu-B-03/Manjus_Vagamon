@@ -2,6 +2,60 @@
 /* CONTACT PAGE */
 /* ============================= */
 
+/* =========================================
+   Contact Page Header
+========================================= */
+
+.contact-header {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #FFF8CF;
+}
+
+.contact-title {
+    color: #2A7C13;
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    animation: contactTitleEntry 1s ease-out;
+}
+
+.contact-subtitle {
+    color: #555;
+    font-size: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+    animation: contactSubtitleEntry 1s ease-out 0.2s both;
+}
+
+@keyframes contactTitleEntry {
+
+    from {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes contactSubtitleEntry {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
 .contact-page {
     position: relative;
 
@@ -9,7 +63,7 @@
 
     margin-top: 70px;
 
-    padding: 70px 20px;
+    padding: 50px 0px;
 
     background-image:
         linear-gradient(
@@ -277,11 +331,11 @@
     }
 
     .contact-map {
-        order: 1;
+        order: 2;
     }
 
     .contact-info {
-        order: 2;
+        order: 1;
     }
 
     .map-wrapper {
@@ -299,6 +353,18 @@
 /* ============================= */
 
 @media (max-width: 600px) {
+
+        .contact-header {
+        padding: 55px 20px;
+    }
+
+    .contact-title {
+        font-size: 36px;
+    }
+
+    .contact-subtitle {
+        font-size: 17px;
+    }
 
     .contact-page {
         margin-top: 60px;

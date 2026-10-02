@@ -63,7 +63,7 @@ function App() {
 
         {/* <Route path='/gallery' element={<Gallery />} /> */}
 
-        <Route path='/attractions' element={<Attractions />} />
+        <Route path='/attractions' element={<Attractions vagamon={vagamon} />} />
 
         {/* <Route path='/location' element={<Location />} /> */}
 

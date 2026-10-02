@@ -448,3 +448,86 @@
     transform: translateY(-3px);
     background-color: #205d0f;
 }
+
+```css
+/* =========================================
+   Vagamon Attractions CTA
+========================================= */
+
+.home-attractions-cta {
+    padding: 70px 20px;
+    text-align: center;
+    background-color: #FFF8CF;
+}
+
+.home-attractions-content {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.home-attractions-content h2 {
+    color: #2A7C13;
+    font-size: 34px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.home-attractions-content p {
+    color: #555;
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.home-attractions-button {
+    display: inline-block;
+
+    padding: 10px 28px;
+
+    background-color: #2A7C13;
+    color: #FFF8CF;
+
+    border-radius: 30px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    text-decoration: none;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.home-attractions-button:hover {
+    background-color: #4aab2f;
+    color: #FFF8CF;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   Mobile
+========================================= */
+
+@media (max-width: 768px) {
+
+    .home-attractions-cta {
+        padding: 55px 20px;
+    }
+
+    .home-attractions-content h2 {
+        font-size: 28px;
+    }
+
+    .home-attractions-content p {
+        font-size: 16px;
+    }
+
+    .home-attractions-button {
+        padding: 9px 24px;
+        font-size: 15px;
+    }
+
+}
+```

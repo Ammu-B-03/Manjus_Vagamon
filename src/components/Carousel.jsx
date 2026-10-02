@@ -7,6 +7,7 @@ import image1 from '../assets/images/property1.jpeg'
 import image2 from '../assets/images/outdoor1.jpeg'
 import image3 from '../assets/images/property4.jpeg'
 import image4 from '../assets/images/outdoor3.jpeg'
+import image5 from '../assets/images/outdoor4.jpg'
 
 function Carousel() {
 
@@ -49,6 +50,13 @@ function Carousel() {
                         src={image4}
                         alt="Manjus Vagamon"
                         className="carousel-image image4"
+                    />
+                </BootstrapCarousel.Item>
+                <BootstrapCarousel.Item>
+                    <img
+                        src={image5}
+                        alt="Manjus Vagamon"
+                        className="carousel-image image5"
                     />
                 </BootstrapCarousel.Item>
             </BootstrapCarousel>

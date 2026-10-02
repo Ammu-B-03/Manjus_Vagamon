@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import { Container, Row, Col, Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import './../assets/css/rooms.css'
@@ -14,7 +14,7 @@ import floor1Image1 from '../assets/images/property1.jpeg'
 import floor1Image2 from '../assets/images/property4.jpeg'
 import floor1Image3 from '../assets/images/dining_hall.jpg'
 import floor1Image4 from '../assets/images/Kitchen.jpg'
-import floor1Image5 from '../assets/images/property4.jpeg'
+import floor1Image5 from '../assets/images/outdoor5.jpg'
 import floor1Image6 from '../assets/images/bedroom2_1.jpg'
 
 
@@ -47,6 +47,54 @@ function Rooms() {
 
     // Stores the currently selected image for each floor
     const [selectedImages, setSelectedImages] = useState({})
+    const [showGallery, setShowGallery] = useState(false)
+const [galleryFloor, setGalleryFloor] = useState(null)
+const [galleryIndex, setGalleryIndex] = useState(0)
+
+useEffect(() => {
+
+    if (!showGallery) return
+
+    const handleKeyDown = (event) => {
+
+        const floor = floors.find(
+            (item) => item.id === galleryFloor
+        )
+
+        if (!floor) return
+
+        if (event.key === "ArrowLeft") {
+
+            setGalleryIndex((currentIndex) =>
+                currentIndex === 0
+                    ? floor.images.length - 1
+                    : currentIndex - 1
+            )
+
+        }
+
+        if (event.key === "ArrowRight") {
+
+            setGalleryIndex((currentIndex) =>
+                currentIndex === floor.images.length - 1
+                    ? 0
+                    : currentIndex + 1
+            )
+
+        }
+
+        if (event.key === "Escape") {
+            setShowGallery(false)
+        }
+    }
+
+    window.addEventListener("keydown", handleKeyDown)
+
+    return () => {
+        window.removeEventListener("keydown", handleKeyDown)
+    }
+
+}, [showGallery, galleryFloor])
 
 
     // ==============================
@@ -63,7 +111,7 @@ function Rooms() {
             title: "The Ground Floor",
 
             description:
-                "A comfortable family space with two bedrooms, a living room,a dining space kitchen and an enormous balcony with BBQ facilities.",
+                "A comfortable family space with two bedrooms, a living room,a dining space, kitchen and an enormous balcony with BBQ facilities, which is the best of Manjus Vagamon.",
 
             details:
                 "This main floor is the heart of the cottage, with shared spaces for relaxing, dining and spending time together.If you love cooking, there is a refreshing space for your culinary adventures here.This floor can be directly accessed from the car",
@@ -98,7 +146,7 @@ function Rooms() {
 
             floor: "Floor -1",
 
-            title: "Private Bedrooms with a View",
+            title: "Floor 1",
 
             description:
                 "Three comfortable bedrooms, each with its own private balcony and windows overlooking the mountains and valleys. A common living space and private garden to enjoy relax in the company of nature",
@@ -132,18 +180,18 @@ function Rooms() {
 
             floor: "Floor -2",
 
-            title: "The Dormitory",
+            title: "Multiple Room",
 
             description:
                 "A spacious dormitory-style room designed for extended families and larger groups travelling together.",
 
             details:
-                "This is the best space of Manjus Vagamon.The most happening family space for cousins and siblings and the chilling place for the close friends who has not slept together for a long time. The always inviting multiple room with five beds and normally all families favourite - a large space with all facilities.",
+                "This is the best space of Manjus Vagamon.The most happening family space for cousins and siblings and the chilling place for the close friends who has not slept together in one room for a long time. The always inviting multiple room with five beds and normally all families favourite - a large space with windows on almost all walls open to nature and all facilities you would need.",
 
             price: "₹XXXX / night",
 
             features: [
-                "Dormitory Room",
+                "Premium Multiple Room",
                 "5 Beds",
                 "Suitable for Groups",
                 "Bathroom",
@@ -182,8 +230,8 @@ function Rooms() {
                     </p>
                     <p className='text-secondary'>
                         The finest luxury in the hills is not extravagance, but the feeling of having nowhere else to go. Here in Vagamon, the mountains ask nothing from you except a pause, a deep breath, and a day or two in life that feels beautifully unhurried.
-                         Manjus Vagamon offers the beauty and brightness of a new era with it's six beautifully designed rooms, where each window opens to the mountains, and  the balconies pampers you with complete privacy of the valleys of your own.
-                        </p>
+                        Manjus Vagamon offers the beauty and brightness of a new era with it's six beautifully designed rooms, where each window opens to the mountains, and  the balconies pampers you with complete privacy of the valleys of your own.
+                    </p>
                     <p className='text-secondary'>
                         At Manjus Vagamon, a mandatory night walk along the startlit country roads after campfire and signature barbeque; you would never have enjoyed in life.
                     </p>
@@ -244,21 +292,27 @@ function Rooms() {
                                     <span className="floor-label">
                                         {floor.floor}
                                     </span>
+                                    <h1>
+                                        {floor.title}
+                                    </h1>
 
 
                                     {/* Main Image */}
 
-                                    <div className="main-room-image">
+                                    {/* Main Image */}
 
+                                    <div
+                                        className="main-room-image"
+                                        onClick={() => {
+                                            setGalleryFloor(floor.id)
+                                            setGalleryIndex(selectedImages[floor.id] ?? 0)
+                                            setShowGallery(true)
+                                        }}
+                                    >
                                         <img
-                                            src={
-                                                floor.images[
-                                                selectedImages[floor.id] ?? 0
-                                                ]
-                                            }
+                                            src={floor.images[selectedImages[floor.id] ?? 0]}
                                             alt={floor.title}
                                         />
-
                                     </div>
 
 
@@ -340,9 +394,9 @@ function Rooms() {
 
                                     {/* Floor Title */}
 
-                                    <h2>
+                                    {/* <h2>
                                         {floor.title}
-                                    </h2>
+                                    </h2> */}
 
 
                                     {/* Short Description */}
@@ -439,7 +493,6 @@ function Rooms() {
 
                                     <button
                                         className="details-link"
-
                                         onClick={() =>
                                             setActiveFloor(
                                                 activeFloor === floor.id
@@ -448,12 +501,11 @@ function Rooms() {
                                             )
                                         }
                                     >
+                                        {activeFloor === floor.id ? "Show less" : "More details"}
 
-                                        {activeFloor === floor.id
-                                            ? "Show less"
-                                            : "More details →"
-                                        }
-
+                                        <span className={`details-caret ${activeFloor === floor.id ? "rotate" : ""}`}>
+                                            ▼
+                                        </span>
                                     </button>
 
 
@@ -515,6 +567,73 @@ function Rooms() {
                 </Container>
 
             </section>
+
+            {showGallery && galleryFloor && (
+                <div className="fullscreen-gallery">
+
+                    {/* Close */}
+                    <button
+                        className="gallery-close"
+                        onClick={() => setShowGallery(false)}
+                        aria-label="Close gallery"
+                    >
+                        ×
+                    </button>
+
+
+                    {/* Previous */}
+                    <button
+                        className="gallery-arrow gallery-prev"
+                        onClick={() => {
+                            const floor = floors.find(
+                                (item) => item.id === galleryFloor
+                            )
+
+                            setGalleryIndex(
+                                galleryIndex === 0
+                                    ? floor.images.length - 1
+                                    : galleryIndex - 1
+                            )
+                        }}
+                        aria-label="Previous photo"
+                    >
+                        &#10094;
+                    </button>
+
+
+                    {/* Fullscreen Image */}
+                    <img
+                        src={
+                            floors.find(
+                                (item) => item.id === galleryFloor
+                            ).images[galleryIndex]
+                        }
+                        alt="Room"
+                        className="fullscreen-gallery-image"
+                    />
+
+
+                    {/* Next */}
+                    <button
+                        className="gallery-arrow gallery-next"
+                        onClick={() => {
+                            const floor = floors.find(
+                                (item) => item.id === galleryFloor
+                            )
+
+                            setGalleryIndex(
+                                galleryIndex === floor.images.length - 1
+                                    ? 0
+                                    : galleryIndex + 1
+                            )
+                        }}
+                        aria-label="Next photo"
+                    >
+                        &#10095;
+                    </button>
+
+                </div>
+            )}
 
         </div>
     )

@@ -26,11 +26,11 @@
 /* Individual image positioning */
 
 .custom-carousel .carousel-image.image2 {
-    object-position: bottom !important;
+    object-position: center !important;
 }
 
 .custom-carousel .carousel-image.image4 {
-    object-position: top !important;
+    object-position: center !important;
 }
 
 
