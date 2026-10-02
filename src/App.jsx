@@ -14,6 +14,10 @@ import pine from './assets/images/vagamon2.jpg'
 import paraglide from './assets/images/paragliding.jpg'
 import ghats from './assets/images/vagamon4.jpg'
 import lake from './assets/images/vagamon5.jpg'
+import meadows2 from './assets/images/vagamon6.jpg'
+import waterfall from './assets/images/vagamon7.jpg'
+import orchid from './assets/images/vagamon8.jpg'
+
 
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
@@ -44,6 +48,21 @@ function App() {
       id:5,
       image:lake,
       title:"Tea Lake"
+    },
+    {
+      id:6,
+      image:meadows2,
+      title:"Meadows"
+    },
+    {
+      id:7,
+      image:waterfall,
+      title:"Palozhukum Para"
+    },
+    {
+      id:8,
+      image:orchid,
+      title:"Orchid Garden"
     },
   ]
 
