@@ -179,6 +179,69 @@
     margin: 0;
 }
 
+.carousel-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+
+/* =========================================================
+   CALL BUTTON
+   ========================================================= */
+
+.book-now-button {
+    padding: 5px 30px;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    color: #2A7C13 !important;
+    background-color: #fff8cfd1 !important;
+
+    border: solid 1px #2A7C13 !important;
+    border-radius: 30px;
+
+    white-space: nowrap;
+
+    animation: buttonEntry 1.2s ease-out 0.4s both;
+}
+
+.book-now-button:hover {
+    color: #FFF8CF !important;
+    background-color: #2A7C13 !important;
+}
+
+
+/* =========================================================
+   WHATSAPP BUTTON
+   ========================================================= */
+
+.whatsapp-button {
+    padding: 5px 30px;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    border: none;
+    border-radius: 30px;
+
+    white-space: nowrap;
+
+    animation: buttonEntry 1.2s ease-out 0.4s both;
+}
+
+
+/* =========================================================
+   BUTTON SVG ICONS
+   ========================================================= */
+
+.book-now-button svg,
+.whatsapp-button svg {
+    vertical-align: middle;
+}
+
 
 /* =========================================
    Nearby Section
